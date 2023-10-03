@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario</h2>
+        <form id="formulario">
+          <label for="dni">DNI:</label>
+          <input type="text" id="dni" name="dni"><br>
+    
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre"><br>
+    
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo"><br>
+    
+          <label for="tipo">Tipo:</label>
+          <select id="tipo" name="tipo" onchange="mostrarCampos()">
+            <option value="">Seleccione</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+          </select><br>
+    
+          <div id="camposEstudiante" style="display: none;">
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" name="codigo"><br>
+    
+            <label for="programa">Programa:</label>
+            <input type="text" id="programa" name="programa"><br>
+          </div>
+    
+          <div id="camposProfesor" style="display: none;">
+            <label for="profesion">Profesión:</label>
+            <input type="text" id="profesion" name="profesion"><br>
+    
+            <label for="tarjetaProfesional">Tarjeta Profesional:</label>
+            <input type="text" id="tarjetaProfesional" name="tarjetaProfesional"><br>
+          </div>
+    
+          <button id="btnAgregar" type="submit">Agregar</button>
+        </form>
+      </div>
+      <div class="div-listado">
+        <h2>LISTADO USUARIOS</h2>
+        <div class="div-usuarios">
+            
+        </div>
+      </div>
+    <script src="./app.js"></script>
+</body>    
+</html>
